@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.section1{
+    background-color: aquamarine;
+    min-height: 500px;
+}
+.section2{
+    background-color: bisque;
+    min-height: 500px;
+}
+
+.section3{
+    background-color: darkseagreen;
+    min-height: 500px;
+}
