@@ -62,10 +62,10 @@ class Form extends React.Component{
           <input type="text" onKeyUp={this.changePunchline} /><br/>
           <input type="submit" value="SUBMIT JOKE" />
         </form>
+        
       </div>
     )
   }
-
 }
 
 
