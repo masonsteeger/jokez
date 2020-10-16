@@ -5,7 +5,7 @@
 class Section2 extends React.Component {
 
   componentDidMount = () => {
-    // this.props.jokeCallback();
+    this.props.jokeCallback();
   }
 
 
