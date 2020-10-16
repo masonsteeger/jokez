@@ -23,4 +23,18 @@ nav{
     width: 120px;
     display: flex;
     flex-direction: column;
+    padding: 12px 0;
 }
+nav button{
+    height: 100px;
+    background-color: rgba(222, 184, 135, 0.432);
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.new-joke-button{
+    border-top: 1px solid rgba(0, 0, 0, 0.288);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.288);
+}
+
