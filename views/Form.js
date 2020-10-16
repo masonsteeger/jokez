@@ -1,10 +1,7 @@
 class Form extends React.Component {
-
   state = {
     jokes: []
   }
-
-
   createJoke = (event) => {
     event.preventDefault();
     axios.post(
@@ -28,27 +25,21 @@ class Form extends React.Component {
       }
     )
   }
-
   changeType = (event) => {
     this.setState({
       newType: event.target.value
     })
   }
-
   changeSetup = (event) => {
     this.setState({
       newSetup: event.target.value
     })
   }
-
   changePunchline = (event) => {
     this.setState({
       newPunchline: event.target.value
     })
   }
-
-
-
   render = () => {
     return (
       <div>
@@ -62,14 +53,7 @@ class Form extends React.Component {
           <input type="text" onKeyUp={this.changePunchline} /><br />
           <input type="submit" value="SUBMIT JOKE" />
         </form>
-        
       </div>
     )
   }
 }
-
-
-// ReactDOM.render(
-//     <Form />,
-//     document.querySelector(".section3")
-// )
