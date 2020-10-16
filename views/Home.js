@@ -12,6 +12,7 @@ class App extends React.Component {
                 <p className="joke-home-setup">the setup for the joke here</p>
                 <p className="joke-home-punchline">the punchline here</p>
             </div>
+            
         </div>
     }
 }
