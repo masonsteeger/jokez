@@ -16,27 +16,21 @@ class Form extends React.Component {
       this.props.jokeCallback()
     )
   }
-
   changeType = (event) => {
     this.setState({
       newType: event.target.value
     })
   }
-
   changeSetup = (event) => {
     this.setState({
       newSetup: event.target.value
     })
   }
-
   changePunchline = (event) => {
     this.setState({
       newPunchline: event.target.value
     })
   }
-
-
-
   render = () => {
     return (
       <div className="form">
@@ -50,14 +44,7 @@ class Form extends React.Component {
           <input type="text" onKeyUp={this.changePunchline} /><br />
           <input type="submit" value="SUBMIT JOKE" />
         </form>
-
       </div>
     )
   }
 }
-
-
-// ReactDOM.render(
-//     <Form />,
-//     document.querySelector(".section3")
-// )
