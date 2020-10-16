@@ -1,10 +1,11 @@
 
 
 class App extends React.Component {
-    Component
+    // Component
 
     render = () => {
-        return <div className="homepage">
+        return <div>
+
             <h1>JOKES APP (HOMEPAGE)</h1>
             <div className="joke-of-the-day">
                 <h3 className="title">Joke Of The Day</h3>
