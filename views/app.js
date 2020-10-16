@@ -1,17 +1,25 @@
 
-
 class App extends React.Component {
 
-
     render = () => {
-        return <div>
-            <h1>JOKES APP (in progress...)</h1>
+        return(
+        <div className="main-body">
+          <div className="homepage">
+            <Home />
+          </div>
+          <div className="section2">
+            <Section2 />
+          </div>
+          <div className="form">
+            <Form />
+          </div>
         </div>
+      )
     }
 }
 
 
 ReactDOM.render(
     <App />,
-    document.querySelector(".section1")
+    document.querySelector("main")
 )
