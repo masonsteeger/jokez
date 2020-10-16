@@ -17,9 +17,9 @@ class Section2 extends React.Component {
             (joke) => {
               return(
                 <div className="joke-div">
-                  {joke.type}
-                  {joke.setup}
-                  {joke.punchline}
+                  <h3>{joke.type}</h3>
+                  <p>{joke.setup}</p>
+                  <p>{joke.punchline}</p>
                 </div>
               )
             }
