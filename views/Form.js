@@ -13,7 +13,10 @@ class Form extends React.Component {
         punchline: this.state.newPunchline,
       }
     ).then(
-      this.props.jokeCallback()
+      (response) => {
+        this.props.jokeCallback()
+      }
+
     )
   }
   changeType = (event) => {
