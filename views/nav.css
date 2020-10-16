@@ -1,0 +1,26 @@
+
+main{
+    position: relative;
+}
+
+/* alligning the rest to match the nav format */
+.homepage{
+    margin-left: 120px;
+}
+.form{
+    margin-left:120px;
+}
+.section2{
+    margin-left: 120px;
+}
+
+nav{
+    background-color: blue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+}

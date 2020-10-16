@@ -16,6 +16,11 @@ class App extends React.Component {
   render = () => {
     return (
       <div className="main-body">
+        <nav>
+          <button>Home</button>
+          <button>Add a new joke</button>
+          <button>See All Jokes</button>
+        </nav>
         <div className="homepage">
           <Home />
         </div>
