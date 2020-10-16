@@ -1,7 +1,7 @@
-class Form extends React.Component{
+class Form extends React.Component {
 
-  state={
-    jokes:[]
+  state = {
+    jokes: []
   }
 
 
@@ -50,16 +50,16 @@ class Form extends React.Component{
 
 
   render = () => {
-    return(
+    return (
       <div>
         <h2>Submit a Joke!</h2>
         <form onSubmit={this.createJoke}>
-          <label>Joke Type</label><br/>
-          <input type="text" onKeyUp={this.changeType}/><br/>
-          <label>Joke Setup</label><br/>
-          <input type="text" onKeyUp={this.changeSetup} /><br/>
-          <label>Joke Punchline</label><br/>
-          <input type="text" onKeyUp={this.changePunchline} /><br/>
+          <label>Joke Type</label><br />
+          <input type="text" onKeyUp={this.changeType} /><br />
+          <label>Joke Setup</label><br />
+          <input type="text" onKeyUp={this.changeSetup} /><br />
+          <label>Joke Punchline</label><br />
+          <input type="text" onKeyUp={this.changePunchline} /><br />
           <input type="submit" value="SUBMIT JOKE" />
         </form>
       </div>
@@ -69,7 +69,7 @@ class Form extends React.Component{
 }
 
 
-ReactDOM.render(
-    <Form />,
-    document.querySelector(".section3")
-)
+// ReactDOM.render(
+//     <Form />,
+//     document.querySelector(".section3")
+// )
