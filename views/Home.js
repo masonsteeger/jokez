@@ -1,10 +1,9 @@
 
 
-class App extends React.Component {
-    // Component
+class Home extends React.Component {
 
     render = () => {
-        return <div>
+        return <div className="homepage">
 
             <h1>JOKES APP (HOMEPAGE)</h1>
             <div className="joke-of-the-day">
@@ -16,8 +15,3 @@ class App extends React.Component {
     }
 }
 
-
-ReactDOM.render(
-    <App />,
-    document.querySelector(".section1")
-)
