@@ -49,7 +49,7 @@
         $row_object = pg_fetch_object($results);
       }
       return $jokes;
-    }
+    } 
 
     static function update($updated_joke){
       $query = "UPDATE jokes SET type = $1, setup=$2, punchline = $3 WHERE id = $4";
