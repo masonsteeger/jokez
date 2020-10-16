@@ -5,7 +5,7 @@
 class Section2 extends React.Component {
 
   componentDidMount = () => {
-    this.props.jokeCallback();
+    // this.props.jokeCallback();
   }
 
 
@@ -13,13 +13,13 @@ class Section2 extends React.Component {
       return (
       <div className="section2">
         <h2>Jokes List</h2>
-          {this.props.state.jokes.map(
+          {this.props.alljokes.map(
             (joke) => {
               return(
                 <div className="joke-div">
-                  {joke.type}
-                  {joke.setup}
-                  {joke.punchline}
+                  <h3>{joke.type}</h3>
+                  <p>{joke.setup}</p>
+                  <p>{joke.punchline}</p>
                 </div>
               )
             }

@@ -24,12 +24,12 @@
 
 
   class Jokes{
-  static function create($joke){
-    $query = "INSERT INTO jokes (type, setup, punchline, vote) VALUES ($1, $2, $3, 0)";
-    $query_params = array($joke->type, $joke->setup, $joke->punchline);
-    pg_query_params($query, $query_params);
-    return self::read();
-    }
+    static function create($joke){
+      $query = "INSERT INTO jokes (type, setup, punchline, vote) VALUES ($1, $2, $3, 0)";
+      $query_params = array($joke->type, $joke->setup, $joke->punchline);
+      pg_query_params($query, $query_params);
+      return self::read();
+      }
 
     static function read(){
       $jokes = array();
@@ -42,10 +42,9 @@
           $row_object->type,
           $row_object->setup,
           $row_object->punchline,
-          $row_object->vote
+          intval($row_object->vote)
         );
         $jokes[]= $new_joke;
-
         $row_object = pg_fetch_object($results);
       }
       return $jokes;
@@ -59,14 +58,18 @@
       return self::read();
     }
 
-
-
     static function delete($id){
       $query = "DELETE FROM jokes WHERE id = $1";
       $query_params = array($id);
       pg_query_params($query, $query_params);
 
       return self::read();
+    }
+
+    static function random(){
+      $jokes = self::read();
+      $randomJoke = $jokes[array_rand($jokes)];
+      return $randomJoke;
     }
 
   }

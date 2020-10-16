@@ -38,12 +38,18 @@ setTimeout(() => {
 
 class App extends React.Component {
   state = {
-    jokes: []
+    jokes: [],
+    randJoke: []
+  }
+
+  componentDidMount = () => {
+    this.getJokes();
   }
 
   getJokes = () => {
     axios.get('/jokes').then(
       (response) => {
+        // console.log(response.data);
         this.setState(
           {
             jokes: response.data
@@ -52,6 +58,22 @@ class App extends React.Component {
       }
     )
   }
+
+  getRandomJoke = () => {
+    axios.get('/random').then(
+      (response) => {
+        console.log(response.data);
+        this.setState(
+          {
+            randJoke: response.data
+          }
+        )
+      }
+    )
+  }
+
+
+
   render = () => {
     return (
       <div className="main-body">
@@ -60,9 +82,9 @@ class App extends React.Component {
           <button className="new-joke-button">Add a new joke</button>
           <button className="all-jokes-button">See All Jokes</button>
         </nav>
-        <Home state={this.state} />
-        <Section2 state={this.state} jokeCallback={this.getJokes} />
-        <Form state={this.state} jokeCallback={this.getJokes} />
+        <Home state={this.state} randCallback={this.getRandomJoke}/>
+        <Section2 alljokes={this.state.jokes} jokeCallback={this.getJokes} />
+        <Form state={this.state.jokes} jokeCallback={this.getJokes} />
 
       </div>
     )
