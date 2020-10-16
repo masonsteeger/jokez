@@ -1,7 +1,6 @@
-
 class App extends React.Component {
   state = {
-    jokes:[]
+    jokes: []
   }
 
   getJokes = () => {
@@ -15,21 +14,23 @@ class App extends React.Component {
       }
     )
   }
+  render = () => {
+    return (
+      <div className="main-body">
+        <nav>
+          <button>Home</button>
+          <button>Add a new joke</button>
+          <button>See All Jokes</button>
+        </nav>
+        <Home state={this.state} />
+        <Section2 state={this.state} jokeCallback={this.getJokes} />
+        <Form state={this.state} jokeCallback={this.getJokes} />
 
-
-    render = () => {
-        return(
-        <div className="main-body">
-            <Home state={this.state} />
-            <Section2 state={this.state} jokeCallback={this.getJokes}/>
-            <Form state={this.state} jokeCallback={this.getJokes}/>
-        </div>
-      )
-    }
+      </div>
+    )
+  }
 }
-
-
 ReactDOM.render(
-    <App />,
-    document.querySelector("main")
+  <App />,
+  document.querySelector("main")
 )
