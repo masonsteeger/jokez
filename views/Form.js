@@ -1,12 +1,10 @@
 class Form extends React.Component {
 
-  state = {
-    jokes: []
-  }
 
 
   createJoke = (event) => {
     event.preventDefault();
+    event.target.reset();
     axios.post(
       '/jokes',
       {
@@ -15,17 +13,7 @@ class Form extends React.Component {
         punchline: this.state.newPunchline,
       }
     ).then(
-      (response) => {
-        axios.get(
-          '/jokes'
-        ).then((response) => {
-          this.setState(
-            {
-              jokes: response.data
-            }
-          )
-        })
-      }
+      this.props.jokeCallback()
     )
   }
 
@@ -51,7 +39,7 @@ class Form extends React.Component {
 
   render = () => {
     return (
-      <div>
+      <div className="form">
         <h2>Submit a Joke!</h2>
         <form onSubmit={this.createJoke}>
           <label>Joke Type</label><br />
@@ -62,7 +50,7 @@ class Form extends React.Component {
           <input type="text" onKeyUp={this.changePunchline} /><br />
           <input type="submit" value="SUBMIT JOKE" />
         </form>
-        
+
       </div>
     )
   }
