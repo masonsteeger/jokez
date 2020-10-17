@@ -30,11 +30,12 @@
 
 .title{
     font-size: 2.5em;
+    cursor: pointer;
 }
 
 .joke-home-setup{
     font-size: 1.5em;
-    cursor: pointer;
+    
 }
 
 .joke-home-punchline{
@@ -53,4 +54,26 @@
 
 .show-punch-line{
     width: 90%;
+}
+
+.animation1{
+    position: relative;
+    animation-name: alerting;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes alerting{
+    5%{
+        transform: scale(1.1);
+    }
+    10%{
+        transform: scale(.9);
+    }
+    15%{
+        transform: scale(1.1);
+    }
+    40%{
+        transform: scale(1);
+    }
 }
