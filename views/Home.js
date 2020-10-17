@@ -2,13 +2,14 @@
 
 setTimeout(() => {
   const jokeHomePunchline = document.querySelector(".joke-home-punchline");
-  const question = document.querySelector(".joke-home-setup");
+  const jokeOfTheDay = document.querySelector(".title");
 
   const showPunchLine = (event) => {
     jokeHomePunchline.classList.add("show-punch-line");
+    jokeOfTheDay.classList.remove("animation1");
   }
 
-  question.addEventListener("click", showPunchLine);
+  jokeOfTheDay.addEventListener("click", showPunchLine);
 
 }, 500);
 
@@ -28,7 +29,7 @@ class Home extends React.Component {
 
       </div>
       <div className="joke-of-the-day">
-        <h3 className="title">Joke Of The Day!</h3>
+        <h3 className="title  animation1">Joke Of The Day!</h3>
         <p className="joke-home-setup">{this.props.state.randJoke.setup}</p>
         <p className="joke-home-punchline">-{this.props.state.randJoke.punchline}</p>
       </div>
