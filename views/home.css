@@ -33,14 +33,16 @@
 }
 
 .joke-home-setup{
-    font-size: 1.6em;
+    font-size: 1.5em;
     cursor: pointer;
 }
 
 .joke-home-punchline{
-    font-size: 1.4em;
+    font-size: 1.1em;
+    transform: translateX(30px);
+    word-break: keep-all;
     width: 0;
-    height: 30px;
+    height: 21px;
     left: 0;
     justify-self: start;
     text-align: left;
@@ -50,5 +52,5 @@
 }
 
 .show-punch-line{
-    width: 100%;
+    width: 90%;
 }
