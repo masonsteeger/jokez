@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Righteous&display=swap');
+
+.homepage{
+    display:grid;
+    grid-template-rows: 150px;
+    place-items: center;
+    background-color: rgb(6, 197, 197);
+}
+
+.homepage h1{
+    font-family: 'Righteous', cursive;
+    font-size: 3.7em;
+}
+.title-container p {
+    font-family: 'Gloria Hallelujah', cursive;
+    text-align: center;
+}
+
+.joke-of-the-day{
+    text-align: center;
+    border: 1px solid rgba(88, 83, 83, 0.658);
+    padding: 12px;
+    height: 200px;
+    width: 500px;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 70px;
+}
+
+.title{
+    font-size: 2.5em;
+}
+
+.joke-home-setup{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.joke-home-punchline{
+    font-size: 1.1em;
+    transform: translateX(30px);
+    word-break: keep-all;
+    width: 0;
+    height: 21px;
+    left: 0;
+    justify-self: start;
+    text-align: left;
+    overflow: hidden;
+    transition: .4s linear;
+    /* border: 1px solid green; */
+}
+
+.show-punch-line{
+    width: 90%;
+}
