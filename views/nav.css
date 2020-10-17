@@ -15,7 +15,7 @@ main{
 }
 
 nav{
-    background-color: blue;
+    background-color: rgba(37, 79, 117, 0.986);
     position: fixed;
     top: 0;
     left: 0;
@@ -24,13 +24,16 @@ nav{
     display: flex;
     flex-direction: column;
     padding: 12px 0;
+    min-height: 500px;
 }
 nav button{
     height: 100px;
-    background-color: rgba(222, 184, 135, 0.432);
+    background-color: rgba(67, 167, 120, 0.699);
     cursor: pointer;
     outline: none;
     border: none;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
 }
 
 .new-joke-button{
@@ -38,3 +41,23 @@ nav button{
     border-bottom: 1px solid rgba(0, 0, 0, 0.288);
 }
 
+.button-shadow{
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.39);
+    top: 12px;
+    left:0;
+    cursor:pointer;
+    transition: .2s ease-in-out;
+}
+
+.shadow-transition-one{
+    transform: translateY(100px);
+}
+.shadow-transition-two{
+    transform: translateY(200px);
+}
+/* .new-joke-button:hover + .button-shadow, .button-shadow:hover{
+    top: 112px;
+} */

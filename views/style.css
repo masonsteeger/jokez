@@ -1,20 +1,27 @@
 *{
     margin: 0;
     padding: 0;
+    /* border: 1px solid red; */
+}
+body{
+    font-family: 'Karla', sans-serif;
 }
 
 
 .homepage{
-    background-color: aquamarine;
+    /* background-color: rgb(224, 236, 117); */
+    height: 100vh;
     min-height: 500px;
 }
 .section2{
     background-color: bisque;
+    height: 100vh;
     min-height: 500px;
 }
 
 .form{
     background-color: darkseagreen;
+    height: 100vh;
     min-height: 500px;
 }
 .joke-div{
