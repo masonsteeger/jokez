@@ -33,7 +33,7 @@
 
     static function read(){
       $jokes = array();
-      $results = pg_query("SELECT * FROM jokes");
+      $results = pg_query("SELECT * FROM jokes ORDER BY id ASC");
       $row_object = pg_fetch_object($results);
 
       while($row_object){
