@@ -20,7 +20,7 @@ setTimeout(() => {
       shadowButton.classList.remove("shadow-transition-two");
     }
     if (className === "new-joke-button") {
-      newJokePage.style.display = "block";
+      newJokePage.style.display = "grid";
       homePage.style.display = "none";
       allJokesPage.style.display = "none";
       shadowButton.classList.remove("shadow-transition-two");
@@ -86,8 +86,8 @@ class App extends React.Component {
       <div className="main-body">
         <nav>
           <button className="home-button">Home</button>
-          <button className="new-joke-button">got a joke?</button>
           <button className="all-jokes-button">Library</button>
+          <button className="new-joke-button">got a joke?</button>
           <div className="button-shadow"></div>
         </nav>
         <Home state={this.state} randCallback={this.getRandomJoke} />

@@ -14,13 +14,13 @@ body{
     min-height: 500px;
 }
 .section2{
-    background-color: bisque;
+    /* background-color: bisque; */
     height: 100vh;
     min-height: 500px;
 }
 
 .form{
-    background-color: darkseagreen;
+    /* background-color: #3fc1c0; */
     height: 100vh;
     min-height: 500px;
 }
