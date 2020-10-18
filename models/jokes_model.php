@@ -25,8 +25,8 @@
 
   class Jokes{
     static function create($joke){
-      $query = "INSERT INTO jokes (type, setup, punchline, vote) VALUES ($1, $2, $3, $4=0)";
-      $query_params = array($joke->type, $joke->setup, $joke->punchline, $joke->vote);
+      $query = "INSERT INTO jokes (type, setup, punchline, vote) VALUES ($1, $2, $3, $4)";
+      $query_params = array($joke->type, $joke->setup, $joke->punchline, $joke->vote = 0);
       pg_query_params($query, $query_params);
       return self::read();
       }

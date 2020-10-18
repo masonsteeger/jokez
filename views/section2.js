@@ -32,10 +32,10 @@ class Section2 extends React.Component {
             (joke) => {
               return (
                 <div className="joke-div" key={joke.id}>
-                  <h3>{joke.type}</h3>
-                  <p>{joke.setup}</p><br/>
-                  <p>{joke.punchline}</p><br/>
-                  <button id={joke.id} joketype={joke.type} jokesetup={joke.setup} jokepunchline={joke.punchline} value={joke.vote} onClick={this.voteUp}> ^ </button><p>{joke.vote}</p><button id = {joke.id} joketype={joke.type} jokesetup={joke.setup} jokepunchline={joke.punchline} value={joke.vote} onClick={this.voteDown}> v </button>
+                  <h2>{joke.type}</h2>
+                  <h4>{joke.setup}</h4><br/>
+                  <h4>{joke.punchline}</h4><br/>
+                  <p><div className='vote-up' id={joke.id} joketype={joke.type} jokesetup={joke.setup} jokepunchline={joke.punchline} value={joke.vote} onClick={this.voteUp}></div> {joke.vote} <div className='vote-down' id = {joke.id} joketype={joke.type} jokesetup={joke.setup} jokepunchline={joke.punchline} value={joke.vote} onClick={this.voteDown}></div></p>
                 </div>
               )
             }
