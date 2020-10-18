@@ -14,3 +14,6 @@ RewriteRule ^jokes/([0-9]+)$ controllers/jokes_controller.php?action=delete&id=$
 
 RewriteCond %{REQUEST_METHOD} ^GET$
 RewriteRule ^random$ controllers/jokes_controller.php?action=random
+
+RewriteCond %{REQUEST_METHOD} ^PUT$
+RewriteRule ^vote/([0-9]+)$ controllers/jokes_controller.php?action=vote&id=$1

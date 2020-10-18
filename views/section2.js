@@ -8,6 +8,14 @@ class Section2 extends React.Component {
     this.props.jokeCallback();
   }
 
+  voteUp = (event) => {
+    this.props.voteUp(event);
+  }
+
+  voteDown = (event) => {
+    this.props.voteDown(event)
+  }
+
 
   render = () => {
     return (
@@ -25,8 +33,9 @@ class Section2 extends React.Component {
               return (
                 <div className="joke-div" key={joke.id}>
                   <h3>{joke.type}</h3>
-                  <p>{joke.setup}</p>
-                  <p>{joke.punchline}</p>
+                  <p>{joke.setup}</p><br/>
+                  <p>{joke.punchline}</p><br/>
+                  <button id={joke.id} joketype={joke.type} jokesetup={joke.setup} jokepunchline={joke.punchline} value={joke.vote} onClick={this.voteUp}> ^ </button><p>{joke.vote}</p><button id = {joke.id} joketype={joke.type} jokesetup={joke.setup} jokepunchline={joke.punchline} value={joke.vote} onClick={this.voteDown}> v </button>
                 </div>
               )
             }
