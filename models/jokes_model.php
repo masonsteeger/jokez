@@ -25,8 +25,8 @@
 
   class Jokes{
     static function create($joke){
-      $query = "INSERT INTO jokes (type, setup, punchline, vote) VALUES ($1, $2, $3, 0)";
-      $query_params = array($joke->type, $joke->setup, $joke->punchline);
+      $query = "INSERT INTO jokes (type, setup, punchline, vote) VALUES ($1, $2, $3, $4)";
+      $query_params = array($joke->type, $joke->setup, $joke->punchline, $joke->vote = 0);
       pg_query_params($query, $query_params);
       return self::read();
       }
@@ -48,7 +48,7 @@
         $row_object = pg_fetch_object($results);
       }
       return $jokes;
-    } 
+    }
 
     static function update($updated_joke){
       $query = "UPDATE jokes SET type = $1, setup=$2, punchline = $3 WHERE id = $4";
@@ -70,6 +70,15 @@
       $jokes = self::read();
       $randomJoke = $jokes[array_rand($jokes)];
       return $randomJoke;
+    }
+
+
+    static function vote($updated_joke){
+      $query = "UPDATE jokes SET type = $1, setup=$2, punchline = $3, vote = $4 WHERE id = $5";
+      $query_params = array($updated_joke->type, $updated_joke->setup, $updated_joke->punchline, $updated_joke->vote, $updated_joke->id);
+      pg_query_params($query, $query_params);
+
+      return self::read();
     }
 
   }

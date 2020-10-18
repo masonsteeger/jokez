@@ -41,3 +41,28 @@
 .joke-div{
     width: 150px;
 }
+
+.vote-up{
+  display: inline-block;
+  background-image: url('./imgs/up.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:25px;
+  height:25px;
+}
+.vote-up:hover{
+  cursor: pointer;
+}
+.vote-down{
+  display: inline-block;
+  background-image: url('./imgs/down.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:25px;
+  height:25px;
+}
+.vote-down:hover{
+  cursor: pointer;
+}

@@ -79,6 +79,55 @@ class App extends React.Component {
     )
   }
 
+  voteUp = (event) => {
+    const id = event.target.getAttribute('id');
+    const type = event.target.getAttribute('joketype')
+    const setup = event.target.getAttribute('jokesetup')
+    const punchline = event.target.getAttribute('jokepunchline')
+    const newValue = parseInt(event.target.getAttribute('value'))+1
+    axios.put(
+      '/vote/'+id,
+      {
+        type: type,
+        setup: setup,
+        punchline: punchline,
+        vote: newValue
+      }
+    ).then(
+      (response) => {
+        this.setState(
+          {
+          jokes: response.data
+          }
+        )
+      }
+    )
+  }
+
+  voteDown = (event) => {
+    const id = event.target.getAttribute('id');
+    const type = event.target.getAttribute('joketype')
+    const setup = event.target.getAttribute('jokesetup')
+    const punchline = event.target.getAttribute('jokepunchline')
+    const newValue = parseInt(event.target.getAttribute('value'))-1
+    axios.put(
+      '/vote/'+id,
+      {
+        type: type,
+        setup: setup,
+        punchline: punchline,
+        vote: newValue
+      }
+    ).then(
+      (response) => {
+        this.setState(
+          {
+          jokes: response.data
+          }
+        )
+      }
+    )
+  }
 
 
   render = () => {
@@ -91,7 +140,7 @@ class App extends React.Component {
           <div className="button-shadow"></div>
         </nav>
         <Home state={this.state} randCallback={this.getRandomJoke} />
-        <Section2 alljokes={this.state.jokes} jokeCallback={this.getJokes} />
+        <Section2 alljokes={this.state.jokes} jokeCallback={this.getJokes} voteUp={this.voteUp} voteDown={this.voteDown}/>
         <Form state={this.state.jokes} jokeCallback={this.getJokes} />
 
       </div>
