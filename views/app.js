@@ -3,6 +3,7 @@ setTimeout(() => {
   const homeButton = document.querySelector(".home-button");
   const newJokeButton = document.querySelector(".new-joke-button");
   const allJokesButton = document.querySelector(".all-jokes-button");
+  const shadowButton = document.querySelector(".button-shadow");
   const homePage = document.querySelector(".homepage");
   const allJokesPage = document.querySelector(".section2");
   const newJokePage = document.querySelector(".form");
@@ -12,19 +13,25 @@ setTimeout(() => {
     const className = event.target.className;
     console.log(className);
     if (className === "home-button") {
-      homePage.style.display = "block";
+      homePage.style.display = "grid";
       newJokePage.style.display = "none";
       allJokesPage.style.display = "none";
+      shadowButton.classList.remove("shadow-transition-one");
+      shadowButton.classList.remove("shadow-transition-two");
     }
     if (className === "new-joke-button") {
-      newJokePage.style.display = "block";
+      newJokePage.style.display = "grid";
       homePage.style.display = "none";
       allJokesPage.style.display = "none";
+      shadowButton.classList.remove("shadow-transition-two");
+      shadowButton.classList.add("shadow-transition-one");
     }
     if (className === "all-jokes-button") {
       allJokesPage.style.display = "block";
       newJokePage.style.display = "none";
       homePage.style.display = "none";
+      shadowButton.classList.remove("shadow-transition-one");
+      shadowButton.classList.add("shadow-transition-two");
     }
 
   }
@@ -32,7 +39,7 @@ setTimeout(() => {
   allJokesButton.addEventListener("click", togglePages)
   newJokeButton.addEventListener("click", togglePages)
 
-}, 1000);
+}, 500);
 
 
 
@@ -79,10 +86,11 @@ class App extends React.Component {
       <div className="main-body">
         <nav>
           <button className="home-button">Home</button>
-          <button className="new-joke-button">Add a new joke</button>
-          <button className="all-jokes-button">See All Jokes</button>
+          <button className="all-jokes-button">Library</button>
+          <button className="new-joke-button">got a joke?</button>
+          <div className="button-shadow"></div>
         </nav>
-        <Home state={this.state} randCallback={this.getRandomJoke}/>
+        <Home state={this.state} randCallback={this.getRandomJoke} />
         <Section2 alljokes={this.state.jokes} jokeCallback={this.getJokes} />
         <Form state={this.state.jokes} jokeCallback={this.getJokes} />
 
