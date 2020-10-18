@@ -15,7 +15,7 @@ main{
 }
 
 nav{
-    background-color: rgba(37, 79, 117, 0.986);
+    background-color:  #161a1d;
     position: fixed;
     top: 0;
     left: 0;
@@ -27,19 +27,27 @@ nav{
     min-height: 500px;
 }
 nav button{
+    color: rgb(210, 237, 255);
     height: 100px;
-    background-color: rgba(67, 167, 120, 0.699);
+    background-color: #707cb13b;
     cursor: pointer;
     outline: none;
     border: none;
     font-family: 'Karla', sans-serif;
     font-weight: 700;
+    transition: .2s ease-in-out;
 }
 
-.new-joke-button{
-    border-top: 1px solid rgba(0, 0, 0, 0.288);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.288);
+nav button:hover{
+    background-color:  #707cb1c0;
+    color: white;
 }
+
+.all-jokes-button{
+    border-top: 1px solid rgba(238, 238, 238, 0.144);
+    border-bottom: 1px solid rgba(238, 238, 238, 0.144);
+}
+
 
 .button-shadow{
     position: absolute;
@@ -53,10 +61,10 @@ nav button{
 }
 
 .shadow-transition-one{
-    transform: translateY(100px);
+    transform: translateY(200px);
 }
 .shadow-transition-two{
-    transform: translateY(200px);
+    transform: translateY(100px);
 }
 /* .new-joke-button:hover + .button-shadow, .button-shadow:hover{
     top: 112px;

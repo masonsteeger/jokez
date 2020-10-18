@@ -4,7 +4,7 @@
     display:grid;
     grid-template-rows: 150px;
     place-items: center;
-    background-color: rgb(6, 197, 197);
+    background-color: #e3e3fd;
 }
 
 .homepage h1{
@@ -18,7 +18,7 @@
 
 .joke-of-the-day{
     text-align: center;
-    border: 1px solid rgba(88, 83, 83, 0.658);
+    /* border: 1px solid rgba(88, 83, 83, 0.658); */
     padding: 12px;
     height: 200px;
     width: 500px;
