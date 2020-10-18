@@ -4,6 +4,12 @@
 
 class Section2 extends React.Component {
 
+  checkVote = (id, newValue) => {
+    if(newValue < -10){
+      this.props.deleteJoke(id);
+    }
+  }
+
   componentDidMount = () => {
     this.props.jokeCallback();
   }
@@ -13,7 +19,10 @@ class Section2 extends React.Component {
   }
 
   voteDown = (event) => {
-    this.props.voteDown(event)
+    this.props.voteDown(event);
+    const id = event.target.getAttribute('id');
+    const newValue = parseInt(event.target.getAttribute('value'))-1
+    this.checkVote(id, newValue);
   }
 
 
