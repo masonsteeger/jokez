@@ -66,6 +66,18 @@ class App extends React.Component {
     )
   }
 
+  deleteJoke = (id) => {
+    axios.delete('/jokes/'+id).then(
+      (response) => {
+        this.setState(
+          {
+            jokes: response.data
+          }
+        )
+      }
+    )
+  }
+
   getRandomJoke = () => {
     axios.get('/random').then(
       (response) => {
@@ -140,7 +152,7 @@ class App extends React.Component {
           <div className="button-shadow"></div>
         </nav>
         <Home state={this.state} randCallback={this.getRandomJoke} />
-        <Section2 alljokes={this.state.jokes} jokeCallback={this.getJokes} voteUp={this.voteUp} voteDown={this.voteDown}/>
+        <Section2 alljokes={this.state.jokes} jokeCallback={this.getJokes} voteUp={this.voteUp} voteDown={this.voteDown} deleteJoke = {this.deleteJoke}/>
         <Form state={this.state.jokes} jokeCallback={this.getJokes} />
 
       </div>

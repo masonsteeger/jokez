@@ -40,6 +40,12 @@
 
 .joke-div{
     width: 150px;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid black;
+}
+.joke-div > p{
+  font-size: 25px;
 }
 
 .vote-up{
