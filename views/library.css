@@ -1,0 +1,87 @@
+
+
+.section2{
+    display: none;
+    flex-direction: column;
+}
+
+.section-title{
+    margin-bottom: 12px;
+    padding: 12px;
+    font-size: 3em;
+    text-align: center;
+    background-color: rgb(0, 70, 128);
+    color: white;
+}
+
+.list-category{
+    display: flex;
+    justify-content: space-around;
+    padding: 12px;
+    border-bottom: 1px solid rgba(99, 99, 99, 0.534);
+}
+.list-category li{
+    list-style: none;
+    cursor: pointer;
+}
+.list-category li:hover{
+    color: brown;
+}
+
+
+
+
+/* ALL JOKES CONTAINER */
+.all-container {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 12px;
+}
+
+.gen-container, .prog-container, .knock-container{
+    display: none;
+    flex-flow: row wrap;
+    padding: 12px;
+}
+.recent-container{
+    display: none;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding: 12px;
+}
+
+.joke-div{
+    width: 150px;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid black;
+}
+.joke-div > p{
+  font-size: 25px;
+}
+
+.vote-up{
+  display: inline-block;
+  background-image: url('./imgs/up.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:25px;
+  height:25px;
+}
+.vote-up:hover{
+  cursor: pointer;
+}
+.vote-down{
+  display: inline-block;
+  background-image: url('./imgs/down.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:25px;
+  height:25px;
+}
+.vote-down:hover{
+  cursor: pointer;
+}

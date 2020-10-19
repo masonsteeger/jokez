@@ -13,7 +13,10 @@ class Form extends React.Component {
         punchline: this.state.newPunchline,
       }
     ).then(
-      this.props.jokeCallback()
+      (response) => {
+        this.props.jokeCallback()
+      }
+
     )
   }
   changeType = (event) => {
@@ -34,7 +37,8 @@ class Form extends React.Component {
   render = () => {
     return (
       <div className="form">
-        <h2>Submit a Joke!</h2>
+        <h2 className="form-title">Submit a Joke!</h2>
+        <p className="warning-message">If you have a joke that you would like to share with us please feel free to add it to our library. Keep in mind our audience is open to adults and chilren, thus try to keep it family friendly. <br /><span>-Big Thank you from Us!</span></p>
         <form onSubmit={this.createJoke}>
           <label>Joke Type</label><br />
           <input type="text" onKeyUp={this.changeType} /><br />
