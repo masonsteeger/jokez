@@ -8,30 +8,42 @@ class Section2 extends React.Component {
     const progJokes = document.querySelector(".prog-container");
     const recentJokes = document.querySelector(".recent-container");
     const genJokes = document.querySelector(".gen-container");
+    const knockJokes = document.querySelector(".knock-container");
     const className = event.target.className
     if(className === 'all-filter'){
       allJokes.style.display = "flex";
       progJokes.style.display = "none";
       genJokes.style.display = "none";
       recentJokes.style.display = "none"
+      knockJokes.style.display = "none"
     }
     if(className === 'prog-filter'){
       allJokes.style.display = "none";
       progJokes.style.display = "flex";
       genJokes.style.display = "none";
       recentJokes.style.display = "none"
+      knockJokes.style.display = "none"
     }
     if(className === 'gen-filter'){
       allJokes.style.display = "none";
       progJokes.style.display = "none";
       genJokes.style.display = "flex";
       recentJokes.style.display = "none"
+      knockJokes.style.display = "none"
     }
     if(className === 'recent-filter'){
       allJokes.style.display = "none";
       progJokes.style.display = "none";
       genJokes.style.display = "none";
       recentJokes.style.display = "flex"
+      knockJokes.style.display = "none"
+    }
+    if(className === 'knock-filter'){
+      allJokes.style.display = "none";
+      progJokes.style.display = "none";
+      genJokes.style.display = "none";
+      recentJokes.style.display = "none"
+      knockJokes.style.display = "flex"
     }
   }
 
@@ -69,11 +81,13 @@ class Section2 extends React.Component {
           <li className = 'all-filter' onClick = {this.filter}>ALL</li>
           <li className = 'gen-filter' onClick = {this.filter}>GENERAL</li>
           <li className = 'prog-filter' onClick = {this.filter}>PROGRAMMING</li>
+          <li className = 'knock-filter' onClick = {this.filter}>KNOCK-KNOCK</li>
           <li className = 'recent-filter' onClick = {this.filter}>MOST RECENT</li>
         </ul>
         <All state = {this.props.state} voteUp={this.voteUp} voteDown={this.voteDown} />
         <GenJokes state = {this.props.state} voteUp={this.voteUp} voteDown={this.voteDown} />
         <ProgJokes state = {this.props.state} voteUp={this.voteUp} voteDown={this.voteDown} />
+        <KnockJokes state = {this.props.state} voteUp={this.voteUp} voteDown={this.voteDown} />
         <Recent state = {this.props.state} voteUp={this.voteUp} voteDown={this.voteDown} />
 
       </div>
