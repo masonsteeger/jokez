@@ -46,7 +46,9 @@ setTimeout(() => {
 class App extends React.Component {
   state = {
     jokes: [],
-    randJoke: []
+    randJoke: [],
+    progJoke:[],
+    genJoke: []
   }
 
   componentDidMount = () => {
@@ -90,6 +92,8 @@ class App extends React.Component {
       }
     )
   }
+
+  
 
   voteUp = (event) => {
     const id = event.target.getAttribute('id');
@@ -152,7 +156,7 @@ class App extends React.Component {
           <div className="button-shadow"></div>
         </nav>
         <Home state={this.state} randCallback={this.getRandomJoke} />
-        <Section2 alljokes={this.state.jokes} jokeCallback={this.getJokes} voteUp={this.voteUp} voteDown={this.voteDown} deleteJoke = {this.deleteJoke}/>
+        <Section2 state={this.state} jokeCallback={this.getJokes} voteUp={this.voteUp} voteDown={this.voteDown} deleteJoke = {this.deleteJoke}/>
         <Form state={this.state.jokes} jokeCallback={this.getJokes} />
 
       </div>
