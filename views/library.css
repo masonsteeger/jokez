@@ -38,7 +38,7 @@
     padding: 12px;
 }
 
-.gen-container, .prog-container{
+.gen-container, .prog-container, .knock-container{
     display: none;
     flex-flow: row wrap;
     padding: 12px;
