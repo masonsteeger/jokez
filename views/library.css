@@ -32,9 +32,22 @@
 
 
 /* ALL JOKES CONTAINER */
-.jokes-container{
+.all-container {
     display: flex;
     flex-flow: row wrap;
+    padding: 12px;
+}
+
+.gen-container, .prog-container{
+    display: none;
+    flex-flow: row wrap;
+    padding: 12px;
+}
+.recent-container{
+    display: none;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    flex-wrap: wrap;
     padding: 12px;
 }
 

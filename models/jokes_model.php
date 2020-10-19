@@ -67,6 +67,8 @@
       return $jokes;
     }
 
+
+
     static function update($updated_joke){
       $query = "UPDATE jokes SET type = $1, setup=$2, punchline = $3 WHERE id = $4";
       $query_params = array($updated_joke->type, $updated_joke->setup, $updated_joke->punchline, $updated_joke->id);
