@@ -1,8 +1,51 @@
 
 
 
-
 class Section2 extends React.Component {
+
+  filter = (event) => {
+    const allJokes = document.querySelector(".all-container");
+    const progJokes = document.querySelector(".prog-container");
+    const recentJokes = document.querySelector(".recent-container");
+    const genJokes = document.querySelector(".gen-container");
+    const knockJokes = document.querySelector(".knock-container");
+    const className = event.target.className
+    if(className === 'all-filter'){
+      allJokes.style.display = "flex";
+      progJokes.style.display = "none";
+      genJokes.style.display = "none";
+      recentJokes.style.display = "none"
+      knockJokes.style.display = "none"
+    }
+    if(className === 'prog-filter'){
+      allJokes.style.display = "none";
+      progJokes.style.display = "flex";
+      genJokes.style.display = "none";
+      recentJokes.style.display = "none"
+      knockJokes.style.display = "none"
+    }
+    if(className === 'gen-filter'){
+      allJokes.style.display = "none";
+      progJokes.style.display = "none";
+      genJokes.style.display = "flex";
+      recentJokes.style.display = "none"
+      knockJokes.style.display = "none"
+    }
+    if(className === 'recent-filter'){
+      allJokes.style.display = "none";
+      progJokes.style.display = "none";
+      genJokes.style.display = "none";
+      recentJokes.style.display = "flex"
+      knockJokes.style.display = "none"
+    }
+    if(className === 'knock-filter'){
+      allJokes.style.display = "none";
+      progJokes.style.display = "none";
+      genJokes.style.display = "none";
+      recentJokes.style.display = "none"
+      knockJokes.style.display = "flex"
+    }
+  }
 
   checkVote = (id, newValue) => {
     if(newValue < -10){
@@ -12,6 +55,7 @@ class Section2 extends React.Component {
 
   componentDidMount = () => {
     this.props.jokeCallback();
+
   }
 
   voteUp = (event) => {
@@ -26,30 +70,26 @@ class Section2 extends React.Component {
   }
 
 
+
+
+
   render = () => {
     return (
       <div className="section2">
         <h2 className="section-title">Jokes List</h2>
         <ul className="list-category">
-          <li>ALL</li>
-          <li>GENERAL</li>
-          <li>PROGRAMMING</li>
-          <li>MOST RECENT</li>
+          <li className = 'all-filter' onClick = {this.filter}>ALL</li>
+          <li className = 'gen-filter' onClick = {this.filter}>GENERAL</li>
+          <li className = 'prog-filter' onClick = {this.filter}>PROGRAMMING</li>
+          <li className = 'knock-filter' onClick = {this.filter}>KNOCK-KNOCK</li>
+          <li className = 'recent-filter' onClick = {this.filter}>MOST RECENT</li>
         </ul>
-        <div className="jokes-container">
-          {this.props.alljokes.map(
-            (joke) => {
-              return (
-                <div className="joke-div" key={joke.id}>
-                  <h2>{joke.type}</h2>
-                  <h4>{joke.setup}</h4><br/>
-                  <h4>{joke.punchline}</h4><br/>
-                  <p><div className='vote-up' id={joke.id} joketype={joke.type} jokesetup={joke.setup} jokepunchline={joke.punchline} value={joke.vote} onClick={this.voteUp}></div> {joke.vote} <div className='vote-down' id = {joke.id} joketype={joke.type} jokesetup={joke.setup} jokepunchline={joke.punchline} value={joke.vote} onClick={this.voteDown}></div></p>
-                </div>
-              )
-            }
-          )}
-        </div>
+        <All state = {this.props.state} voteUp={this.voteUp} voteDown={this.voteDown} />
+        <GenJokes state = {this.props.state} voteUp={this.voteUp} voteDown={this.voteDown} />
+        <ProgJokes state = {this.props.state} voteUp={this.voteUp} voteDown={this.voteDown} />
+        <KnockJokes state = {this.props.state} voteUp={this.voteUp} voteDown={this.voteDown} />
+        <Recent state = {this.props.state} voteUp={this.voteUp} voteDown={this.voteDown} />
+
       </div>
     )
   }
