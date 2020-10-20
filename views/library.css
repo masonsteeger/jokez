@@ -60,14 +60,45 @@
 }
 
 .joke-div{
-    width: 150px;
-    padding: 20px;
+    position: relative;
+    width: 200px;
+    height: 250px;
+    padding: 12px;
     margin: 10px;
+    border-radius: 10px;
     border: 2px solid rgba(240, 240, 240, 0.541);
+    display: flex;
+    flex-direction: column;
 }
-.joke-div > p{
+
+.joke-div h2{
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed rgb(167, 167, 167);
+}
+.joke-div h4{
+    height: 70px;
+    color: rgb(173, 173, 173);
+    /* border: 1px solid red; */
+}
+.joke-div > div{
   font-size: 25px;
+  align-self: flex-end;
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
 }
+
+.green{
+    color: rgb(75, 194, 75);
+    margin: 0 5px;
+}
+.red {
+    color: rgb(219, 57, 57);
+    margin: 0 5px;
+}
+
 
 .vote-up{
   display: inline-block;
@@ -77,6 +108,7 @@
   background-size: contain;
   width:25px;
   height:25px;
+  margin-right: 5px;
 }
 .vote-up:hover{
   cursor: pointer;
