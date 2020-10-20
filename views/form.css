@@ -2,6 +2,8 @@
 
 .form{
     display: none;
+    background-color:  #283845;
+    color: white;
     grid-template-rows: 1fr 1fr 5fr;
     /* place-items: center; */
     min-height: 500px;
@@ -11,8 +13,11 @@
     font-size: 3em;
     text-align: center;
     padding: 20px 0;
-    background-color: rgb(49, 42, 54);
+    /* background-color: #112433; */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.541);
     color: white;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .warning-message{
@@ -50,7 +55,7 @@
     margin-top: 15px;
     outline: none;
     border: 1px solid rgba(83, 83, 83, 0.534);
-    background-color: rgb(48, 37, 56);
+    background-color: rgb(100, 166, 185);
     color: white;
     border-radius: 5px;
 }

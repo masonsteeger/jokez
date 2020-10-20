@@ -15,7 +15,8 @@ main{
 }
 
 nav{
-    background-color:  #161a1d;
+    background-color:  #354d5f;
+    border-right: 1px solid rgba(155, 155, 155, 0.363);
     position: fixed;
     top: 0;
     left: 0;
@@ -39,7 +40,7 @@ nav button{
 }
 
 nav button:hover{
-    background-color:  #707cb1c0;
+    background-color:  #7087b1c0;
     color: white;
 }
 
