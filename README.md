@@ -11,3 +11,4 @@ The app was built using React for the frontend with a PHP backend and Postgres f
 
 
 ## Unsolved Problems
+I would like to eventually add user authentication and change the voting system to where users are only allowed to vote on a joke once
