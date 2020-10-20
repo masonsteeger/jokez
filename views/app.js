@@ -93,7 +93,7 @@ class App extends React.Component {
     )
   }
 
-  
+
 
   voteUp = (event) => {
     const id = event.target.getAttribute('id');
