@@ -36,7 +36,7 @@
 
 .joke-home-setup{
     font-size: 1.5em;
-    
+
 }
 
 .joke-home-punchline{
@@ -55,6 +55,24 @@
 
 .show-punch-line{
     width: 90%;
+}
+
+.rand-joke{
+  padding: 1em;
+  margin: 1em;
+  border: 2px solid black;
+  border-radius: 25px;
+  box-shadow: 2px 2px white;
+  background-color: #3fc2ff;
+}
+
+.rand-joke:hover{
+  cursor: pointer;
+}
+
+.rand-joke:active{
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px black;
 }
 
 .animation1{
