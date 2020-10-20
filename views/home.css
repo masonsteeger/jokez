@@ -4,7 +4,8 @@
     display:grid;
     grid-template-rows: 150px;
     place-items: center;
-    background-color: #e3e3fd;
+    background-color: #112433;
+    color: white;
 }
 
 .homepage h1{
