@@ -1,23 +1,31 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap');
 
 .section2{
     display: none;
     flex-direction: column;
+    background-color:  #112433;
+    color: white;
 }
 
 .section-title{
+    margin: 0 auto;
     margin-bottom: 12px;
-    padding: 12px;
+    padding: 30px 0;
     font-size: 3em;
     text-align: center;
-    background-color: rgb(0, 70, 128);
+    width: 90%;
+    border-bottom: 1px solid rgba(165, 165, 165, 0.459);
+    font-family: 'Sansita Swashed', cursive;
+    /* background-color: rgb(30, 38, 44); */
     color: white;
 }
 
 .list-category{
     display: flex;
     justify-content: space-around;
-    padding: 12px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 25px;
     border-bottom: 1px solid rgba(99, 99, 99, 0.534);
 }
 .list-category li{
@@ -25,7 +33,7 @@
     cursor: pointer;
 }
 .list-category li:hover{
-    color: brown;
+    color: rgb(42, 130, 165);
 }
 
 
@@ -55,7 +63,7 @@
     width: 150px;
     padding: 20px;
     margin: 10px;
-    border: 2px solid black;
+    border: 2px solid rgba(240, 240, 240, 0.541);
 }
 .joke-div > p{
   font-size: 25px;
