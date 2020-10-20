@@ -19,6 +19,7 @@ class Home extends React.Component {
     const jokeHomePunchline = document.querySelector(".joke-home-punchline");
     jokeHomePunchline.classList.remove("show-punch-line");
     const jokeOfTheDay = document.querySelector(".title");
+    jokeOfTheDay.classList.add("animation1");
     setTimeout(() => {
       this.props.randCallback();
 
