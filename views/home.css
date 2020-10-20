@@ -32,10 +32,15 @@
 .title{
     font-size: 2.5em;
     cursor: pointer;
+    border: 1px solid white;
+    padding: 12px;
+    margin-bottom: 40px;
+    border-radius: 10px;
 }
 
 .joke-home-setup{
     font-size: 1.5em;
+    margin-bottom: 50px;
 
 }
 
@@ -46,6 +51,7 @@
     width: 0;
     height: 21px;
     left: 0;
+    margin-bottom: 30px;
     justify-self: start;
     text-align: left;
     overflow: hidden;
