@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Righteous&display=swap');
+
+.homepage{
+    display:grid;
+    grid-template-rows: 150px;
+    place-items: center;
+    background-color: #112433;
+    color: white;
+}
+
+.homepage h1{
+    font-family: 'Righteous', cursive;
+    font-size: 3.7em;
+}
+.title-container p {
+    font-family: 'Gloria Hallelujah', cursive;
+    text-align: center;
+}
+
+.joke-of-the-day{
+    text-align: center;
+    /* border: 1px solid rgba(88, 83, 83, 0.658); */
+    padding: 12px;
+    height: 200px;
+    width: 500px;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 70px;
+}
+
+.title{
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.joke-home-setup{
+    font-size: 1.5em;
+
+}
+
+.joke-home-punchline{
+    font-size: 1.1em;
+    transform: translateX(30px);
+    word-break: keep-all;
+    width: 0;
+    height: 21px;
+    left: 0;
+    justify-self: start;
+    text-align: left;
+    overflow: hidden;
+    transition: .4s linear;
+    /* border: 1px solid green; */
+}
+
+.show-punch-line{
+    width: 90%;
+}
+
+.rand-joke{
+  padding: 1em;
+  margin: 1em;
+  border: 2px solid black;
+  border-radius: 25px;
+  box-shadow: 2px 2px white;
+  background-color: #3fc2ff;
+}
+
+.rand-joke:hover{
+  cursor: pointer;
+}
+
+.rand-joke:active{
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px black;
+}
+
+.animation1{
+    position: relative;
+    animation-name: alerting;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes alerting{
+    5%{
+        transform: scale(1.1);
+    }
+    10%{
+        transform: scale(.9);
+    }
+    15%{
+        transform: scale(1.1);
+    }
+    40%{
+        transform: scale(1);
+    }
+}

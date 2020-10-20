@@ -1,12 +1,10 @@
 class Form extends React.Component {
 
-  state = {
-    jokes: []
-  }
 
 
   createJoke = (event) => {
     event.preventDefault();
+    event.target.reset();
     axios.post(
       '/jokes',
       {
@@ -16,43 +14,31 @@ class Form extends React.Component {
       }
     ).then(
       (response) => {
-        axios.get(
-          '/jokes'
-        ).then((response) => {
-          this.setState(
-            {
-              jokes: response.data
-            }
-          )
-        })
+        this.props.jokeCallback()
       }
+
     )
   }
-
   changeType = (event) => {
     this.setState({
       newType: event.target.value
     })
   }
-
   changeSetup = (event) => {
     this.setState({
       newSetup: event.target.value
     })
   }
-
   changePunchline = (event) => {
     this.setState({
       newPunchline: event.target.value
     })
   }
-
-
-
   render = () => {
     return (
-      <div>
-        <h2>Submit a Joke!</h2>
+      <div className="form">
+        <h2 className="form-title">Submit a Joke!</h2>
+        <p className="warning-message">If you have a joke that you would like to share with us please feel free to add it to our library. Keep in mind our audience is open to adults and chilren, thus try to keep it family friendly. <br /><span>-Big Thank you from Us!</span></p>
         <form onSubmit={this.createJoke}>
           <label>Joke Type</label><br />
           <input type="text" onKeyUp={this.changeType} /><br />
@@ -62,14 +48,7 @@ class Form extends React.Component {
           <input type="text" onKeyUp={this.changePunchline} /><br />
           <input type="submit" value="SUBMIT JOKE" />
         </form>
-        
       </div>
     )
   }
 }
-
-
-// ReactDOM.render(
-//     <Form />,
-//     document.querySelector(".section3")
-// )
